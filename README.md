@@ -1,5 +1,5 @@
 
-<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="128"/>
+<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
 
 
 # Getting Started with Create React App
