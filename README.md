@@ -1,7 +1,7 @@
 # Todo List Guide to developers:
 
 # Things you need to have installed: 
-   Git,Node.js,npm
+   Node.js,npm
 # How to Run the Application
    1. clone the repository
    2. npm install
