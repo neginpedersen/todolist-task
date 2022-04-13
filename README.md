@@ -3,7 +3,7 @@
 # Things you need to have installed: 
    Node.js,npm
 # How to Run the Application
-   1. clone the repository
+   1. clone the repository if using git otherwise unzip the folder and then
    2. npm install
    3. npm start
    4. localhost:3000/ (to see the application in development mode)
