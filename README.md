@@ -2,10 +2,17 @@
 1. How to Run the Application
 2.  How to use the todo application
  Please look at the the pictures and the numbers in the pictures points to description below: 
+ 1. Create task : fill up the form and click on the create button. The New task text can not be empty, and can not repeated
+ 2. make a task as priority
+ 3. Edit a task
+ 4. Remove a task
 <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
-
+ 
+ 5. Confirm changes
+ 6. Discard changes
 
 <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo2.png" width="400"/>
+7: Click on the tasks text to make it as done
 <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo3.png" width="400"/>
 
 
@@ -15,20 +22,6 @@
 1.How to run your application:
 
 
-
-2.How to use the todo application. 
-Please look at the numbers in the pictures shows the apps activities:
-
-    • 1: Create task: fill up the form and click on the create button. The New task text can not be empty, and can not repeated
-    • 2: make a task as priority
-    • 3: Edit a task
-    • 4: Remove a task
-    <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
-    • 5: confirm changes
-    • 6: discard changes
-    <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo2.png" width="400"/>
-    • 7: click on the tasks text to make it as done
-    <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo3.png" width="400"/>
     
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
