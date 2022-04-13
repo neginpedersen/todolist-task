@@ -1,10 +1,12 @@
+# Todo List Guide 
+1. How to Run the Application
+2.  How to use the todo application
+ Please look at the the pictures and the numbers in the pictures points to description below: 
 <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
 
 
-<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
-<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
-<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
-<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
+<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo2.png" width="400"/>
+<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo3.png" width="400"/>
 
 
 
