@@ -12,10 +12,14 @@
    - sudo npm install -g serve
    - serve -s build
 # ThingsTech stack used in the app:
+
    -react.js
-   -Fontawesome
-   -SCSS
-   -Just used local storage to save the data ;)
+
+-Fontawesome
+
+-SCSS
+
+-Just used local storage to save the data ;)
    
 # Guide to the users
  Please look at the the pictures and the numbers in the pictures points to description below: 
