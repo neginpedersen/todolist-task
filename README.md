@@ -1,9 +1,27 @@
 
-<img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
 
 
-# Getting Started with Create React App
 
+# Todo List Guide 
+
+1.How to run your application:
+
+
+
+2.How to use the todo application. 
+Please look at the numbers in the pictures shows the apps activities:
+
+    • 1: Create task: fill up the form and click on the create button. The New task text can not be empty, and can not repeated
+    • 2: make a task as priority
+    • 3: Edit a task
+    • 4: Remove a task
+    <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo.png" width="400"/>
+    • 5: confirm changes
+    • 6: discard changes
+    <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo2.png" width="400"/>
+    • 7: click on the tasks text to make it as done
+    <img src="https://github.com/neginpedersen/todolist-task/blob/gh-pages/src/img/todo3.png" width="400"/>
+    
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
