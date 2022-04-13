@@ -1,5 +1,8 @@
 # Todo List Guide 
 1. How to Run the Application
+   1. clone the repository
+   2. npm install
+   3. npm start
 2.  How to use the todo application
  Please look at the the pictures and the numbers in the pictures points to description below: 
  1. Create task : fill up the form and click on the create button. The New task text can not be empty, and can not repeated
