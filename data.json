@@ -1,0 +1,21 @@
+[
+    {
+      name: 'House chores',
+      subtitle:'wash the',
+      notes: 'all dry them',
+      completed: false,
+      priority: false
+    },
+    {
+      name: 'Click "Edit" to edit task',
+      completetd: false
+    },
+    {
+      name: 'Click "Delete" to remove task',
+      completed: false
+    },
+    {
+      name: "Click on task to mark as complete",
+      completed: false
+    }
+  ]
