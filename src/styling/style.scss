@@ -2,189 +2,355 @@
   --link-color-h: 197;
   --link-color-s: 10%;
   --link-color-l: 87%;
-  --link-color-hsl: var(--link-color-h), var(--link-color-s), var(--link-color-l);
-  --main-color-1: #1E394B;
+  --link-color-hsl: var(--link-color-h), var(--link-color-s),
+    var(--link-color-l);
+  --main-color-1: #1e394b;
 
   --link-color: hsl(var(--link-color-hsl));
-  --link-color-10: hsla(var(--link-color-hsl), .1);
-  --link-color-20: hsla(var(--link-color-hsl), .2);
-  --link-color-30: hsla(var(--link-color-hsl), .3);
-  --link-color-40: hsla(var(--link-color-hsl), .4);
-  --link-color-50: hsla(var(--link-color-hsl), .5);
-  --link-color-60: hsla(var(--link-color-hsl), .6);
-  --link-color-70: hsla(var(--link-color-hsl), .7);
-  --link-color-80: hsla(var(--link-color-hsl), .8);
-  --link-color-90: hsla(var(--link-color-hsl), .9);
+  --link-color-10: hsla(var(--link-color-hsl), 0.1);
+  --link-color-20: hsla(var(--link-color-hsl), 0.2);
+  --link-color-30: hsla(var(--link-color-hsl), 0.3);
+  --link-color-40: hsla(var(--link-color-hsl), 0.4);
+  --link-color-50: hsla(var(--link-color-hsl), 0.5);
+  --link-color-60: hsla(var(--link-color-hsl), 0.6);
+  --link-color-70: hsla(var(--link-color-hsl), 0.7);
+  --link-color-80: hsla(var(--link-color-hsl), 0.8);
+  --link-color-90: hsla(var(--link-color-hsl), 0.9);
 
-  --link-color-warm: hsl(calc(var(--link-color-h) + 80), var(--link-color-s), var(--link-color-l));
-  --link-color-cold: hsl(calc(var(--link-color-h) - 80), var(--link-color-s), var(--link-color-l));
+  --link-color-warm: hsl(
+    calc(var(--link-color-h) + 80),
+    var(--link-color-s),
+    var(--link-color-l)
+  );
+  --link-color-cold: hsl(
+    calc(var(--link-color-h) - 80),
+    var(--link-color-s),
+    var(--link-color-l)
+  );
 
-  --link-color-low: hsl(var(--link-color-h), calc(var(--link-color-s) / 2), var(--link-color-l));
-  --link-color-lowest: hsl(var(--link-color-h), calc(var(--link-color-s) / 4), var(--link-color-l));
+  --link-color-low: hsl(
+    var(--link-color-h),
+    calc(var(--link-color-s) / 2),
+    var(--link-color-l)
+  );
+  --link-color-lowest: hsl(
+    var(--link-color-h),
+    calc(var(--link-color-s) / 4),
+    var(--link-color-l)
+  );
 
-  --link-color-light: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) / .9));
-  --link-color-dark: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) * .9));
+  --link-color-light: hsl(
+    var(--link-color-h),
+    var(--link-color-s),
+    calc(var(--link-color-l) / 0.9)
+  );
+  --link-color-dark: hsl(
+    var(--link-color-h),
+    var(--link-color-s),
+    calc(var(--link-color-l) * 0.9)
+  );
 }
 
 $breakpoint-tablet: 768px;
 
-
-
-
 body {
-    height: 100vh;
-    background: radial-gradient(#eee, rgb(235, 233, 233));
-  }
+  height: 100vh;
+  background: radial-gradient(#eee, rgb(235, 233, 233));
+}
 
-  form {
-    background-color: white;
-  }
+form {
+  background-color: white;
+}
 
+button {
+  margin: 3px;
+  cursor: pointer;
+}
+
+.to-do-app {
+  box-sizing: border-box;
+  margin: 50px auto 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  @media (min-width: $breakpoint-tablet) {
+    width: 750px;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+.header {
+  background-color: #1e394b;
+  padding: 7px;
+  border-radius: 3px 3px 0 0;
+
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    color: white;
+    font-weight: lighter;
+  }
+}
+
+.create-new {
+  border-top: 1px solid #777;
+  width: 100%;
+  input {
+    box-sizing: border-box;
+    width: 45%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid hsl(210, 8%, 90%);
+    background-color: #edecec;
+    border-radius: 15px;
+    margin: 1% 1% 0 1%;
+  }
   button {
-    margin: 3px;
+    background: var(--main-color-1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    margin: 1% 0 1% 0;
+    border: none;
+    &:hover {
+      background: #1e394b;
+      color: white;
+    }
+  }
+}
+
+.items-list {
+  background: #138796;
+  border-radius: 3px;
+}
+
+.to-do-item {
+  padding: 10px 10px 10px 10px;
+  margin: 1px 0 1px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: #1e394b;
+  font-weight: lighter;
+  user-select: none;
+  background-color: white;
+  Svg {
     cursor: pointer;
   }
+}
 
-  .to-do-app {
-    box-sizing: border-box;
-    margin: 50px auto 0 auto;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    @media (min-width: $breakpoint-tablet) {
-    width: 750px;
-    }
-    @media (max-width: 640px) {
-      width: 100%;
-      }
-
+.name {
+  margin-left: 10px;
+  input {
+    width: 350px;
+    color: #333;
+    padding: 5px;
+    border: none;
+    border-radius: 1px;
   }
+}
 
-  .header {
-    background-color:#1E394B;
+.actions {
+  margin-right: 10px;
+  button {
     padding: 7px;
-    border-radius: 3px 3px 0 0 ;
-
-    h1 {
-      font-size: 36px;
-      margin: 0;
-      color: white;
-      font-weight: lighter;
-    }
+    border-radius: 2px;
+    border: none;
+    background: #333;
+    color: white;
+    font-weight: lighter;
   }
+}
 
-  .create-new {
-    border-top: 1px solid #777;
+.edittodo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  input[type="text"],
+  textarea {
+    background-color: #ffffff;
+    font-family: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    height: 2.3125rem;
     width: 100%;
-    input {
-      box-sizing: border-box;
-      width: 45%;
-      padding: 10px;
-      font-size: 18px;
-      border:none;
-      border-bottom: 1px solid hsl(210,8%,90%);
-      background-color: #EDECEC;
-      border-radius: 15px;
-      margin: 1% 1% 0 1%;
-    }
-    button {
-      background: var(--main-color-1);
-      box-sizing: border-box;
-      border-radius: 10px;
-      color:white;
-      padding: 15px 20px;
-      font-size: 18px;
-      margin: 1% 0 1% 0;
-      border: none;
-      &:hover {
-        background: #1E394B;
-        color: white;
-      }
-    }
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
   }
-
-  .items-list {
-    background: #138796;
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  input[type="color"]:focus,
+  textarea:focus {
+    box-shadow: 0 0 5px #999999;
+    border-color: #999999;
+  }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  input[type="color"]:focus,
+  textarea:focus {
+    background: #fafafa;
+    border-color: #999999;
+    outline: none;
+  }
+  input[type="text"]:disabled,
+  input[type="password"]:disabled,
+  input[type="date"]:disabled,
+  input[type="datetime"]:disabled,
+  input[type="datetime-local"]:disabled,
+  input[type="month"]:disabled,
+  input[type="week"]:disabled,
+  input[type="email"]:disabled,
+  input[type="number"]:disabled,
+  input[type="search"]:disabled,
+  input[type="tel"]:disabled,
+  input[type="time"]:disabled,
+  input[type="url"]:disabled,
+  input[type="color"]:disabled,
+  textarea:disabled {
+    background-color: #dddddd;
+    cursor: default;
+  }
+  input[type="text"][disabled],
+  input[type="text"][readonly],
+  fieldset[disabled] input[type="text"],
+  input[type="password"][disabled],
+  input[type="password"][readonly],
+  fieldset[disabled] input[type="password"],
+  input[type="date"][disabled],
+  input[type="date"][readonly],
+  fieldset[disabled] input[type="date"],
+  input[type="datetime"][disabled],
+  input[type="datetime"][readonly],
+  fieldset[disabled] input[type="datetime"],
+  input[type="datetime-local"][disabled],
+  input[type="datetime-local"][readonly],
+  fieldset[disabled] input[type="datetime-local"],
+  input[type="month"][disabled],
+  input[type="month"][readonly],
+  fieldset[disabled] input[type="month"],
+  input[type="week"][disabled],
+  input[type="week"][readonly],
+  fieldset[disabled] input[type="week"],
+  input[type="email"][disabled],
+  input[type="email"][readonly],
+  fieldset[disabled] input[type="email"],
+  input[type="number"][disabled],
+  input[type="number"][readonly],
+  fieldset[disabled] input[type="number"],
+  input[type="search"][disabled],
+  input[type="search"][readonly],
+  fieldset[disabled] input[type="search"],
+  input[type="tel"][disabled],
+  input[type="tel"][readonly],
+  fieldset[disabled] input[type="tel"],
+  input[type="time"][disabled],
+  input[type="time"][readonly],
+  fieldset[disabled] input[type="time"],
+  input[type="url"][disabled],
+  input[type="url"][readonly],
+  fieldset[disabled] input[type="url"],
+  input[type="color"][disabled],
+  input[type="color"][readonly],
+  fieldset[disabled] input[type="color"],
+  textarea[disabled],
+  textarea[readonly],
+  fieldset[disabled] textarea {
+    background-color: #dddddd;
+    cursor: default;
+  }
+  input[type="text"].radius,
+  input[type="password"].radius,
+  input[type="date"].radius,
+  input[type="datetime"].radius,
+  input[type="datetime-local"].radius,
+  input[type="month"].radius,
+  input[type="week"].radius,
+  input[type="email"].radius,
+  input[type="number"].radius,
+  input[type="search"].radius,
+  input[type="tel"].radius,
+  input[type="time"].radius,
+  input[type="url"].radius,
+  input[type="color"].radius,
+  textarea.radius {
     border-radius: 3px;
   }
-
-  .to-do-item {
-    padding: 10px 10px 10px 10px;
-    margin: 1px 0 1px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    color: #1E394B;
-    font-weight: lighter;
-    user-select: none;
-    background-color: white;
-    Svg {
-      cursor: pointer;
-    }
+  label {
+    font-size: smaller;
   }
+}
 
-  .name {
-    margin-left: 10px;
-    input {
-      width: 350px;
-      color: #333;
-      padding: 5px;
-      border: none;
-      border-radius: 1px;
-    }
-  }
+.mymodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 
-  .actions {
-    margin-right: 10px;
-    button {
-      padding: 7px;
-      border-radius: 2px;
-      border: none;
-      background: #333;
-      color: white;
-      font-weight: lighter;
-    }
+  .mymodal-main {
+    position: fixed;
+    background: white;
+    width: 30vw;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    padding: 1vw;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
   }
+}
 
-  .edittodo {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-          input[type="text"], textarea {
-          background-color: #FFFFFF;
-          font-family: inherit;
-          border-style: solid;
-          border-width: 1px;
-          border-color: #cccccc;
-          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-          color: rgba(0, 0, 0, 0.75);
-          display: block;
-          font-size: 0.875rem;
-          margin: 0 0 1rem 0;
-          padding: 0.5rem;
-          height: 2.3125rem;
-          width: 100%;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
-          input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="color"]:focus, textarea:focus {
-            box-shadow: 0 0 5px #999999;
-            border-color: #999999; }
-          input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="color"]:focus, textarea:focus {
-            background: #fafafa;
-            border-color: #999999;
-            outline: none; }
-          input[type="text"]:disabled, input[type="password"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="month"]:disabled, input[type="week"]:disabled, input[type="email"]:disabled, input[type="number"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="color"]:disabled, textarea:disabled {
-            background-color: #DDDDDD;
-            cursor: default; }
-          input[type="text"][disabled], input[type="text"][readonly], fieldset[disabled] input[type="text"], input[type="password"][disabled], input[type="password"][readonly], fieldset[disabled] input[type="password"], input[type="date"][disabled], input[type="date"][readonly], fieldset[disabled] input[type="date"], input[type="datetime"][disabled], input[type="datetime"][readonly], fieldset[disabled] input[type="datetime"], input[type="datetime-local"][disabled], input[type="datetime-local"][readonly], fieldset[disabled] input[type="datetime-local"], input[type="month"][disabled], input[type="month"][readonly], fieldset[disabled] input[type="month"], input[type="week"][disabled], input[type="week"][readonly], fieldset[disabled] input[type="week"], input[type="email"][disabled], input[type="email"][readonly], fieldset[disabled] input[type="email"], input[type="number"][disabled], input[type="number"][readonly], fieldset[disabled] input[type="number"], input[type="search"][disabled], input[type="search"][readonly], fieldset[disabled] input[type="search"], input[type="tel"][disabled], input[type="tel"][readonly], fieldset[disabled] input[type="tel"], input[type="time"][disabled], input[type="time"][readonly], fieldset[disabled] input[type="time"], input[type="url"][disabled], input[type="url"][readonly], fieldset[disabled] input[type="url"], input[type="color"][disabled], input[type="color"][readonly], fieldset[disabled] input[type="color"], textarea[disabled], textarea[readonly], fieldset[disabled] textarea {
-            background-color: #DDDDDD;
-            cursor: default; }
-          input[type="text"].radius, input[type="password"].radius, input[type="date"].radius, input[type="datetime"].radius, input[type="datetime-local"].radius, input[type="month"].radius, input[type="week"].radius, input[type="email"].radius, input[type="number"].radius, input[type="search"].radius, input[type="tel"].radius, input[type="time"].radius, input[type="url"].radius, input[type="color"].radius, textarea.radius {
-            border-radius: 3px; }
-          label {
-            font-size: smaller;
-          }
-  }
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.close-modal {
+  font-size: 24px;
+  border: none;
+  background-color: inherit;
+  color: #626e79;
+  left: 97%;
+  position: relative;
+}

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import CreateItem from './components/CreateItem';
 import ToDoList from './components/ToDoList';
-
+import Dool from './components/Dool';
+import Modal from './components/Modal';
 let toDoItems = [
   {
-    name: 'Click on the create to create task',
+    name: 'Click on the createxxxxx to create task',
     subtitle:'',
     notes: '',
     subask: '',
@@ -35,6 +36,8 @@ let toDoItems = [
 
 ];
 
+const Color='red';
+
 if (localStorage.getItem("toDoItems") === null || localStorage.getItem("toDoItems") ===  undefined) {
    localStorage.setItem('toDoItems', toDoItems);
    console.log('3');
@@ -51,8 +54,12 @@ class App extends Component {
     super(props);
 
     this.state = {
-      toDoItems:toDoItems
+      toDoItems:toDoItems,
+      showmodal:false,
+      doolColor:Color
     };
+    this.HandleModalclose=this.HandleModalclose.bind(this);
+    this.Onshowmodal=this.Onshowmodal.bind(this);
   }
 
   createItem(itemtitle,itemsubtitle,itemnotes,subtask) {
@@ -104,6 +111,14 @@ class App extends Component {
     localStorage.setItem('toDoItems', JSON.stringify(this.state.toDoItems));
 
   }
+  HandleModalclose() {
+    this.setState({showmodal:false});
+    console.log('closed modal');
+  }
+  Onshowmodal(){
+    this.setState({showmodal:true});
+    console.log('show clicked');
+  }
 
   render() {
     return (
@@ -111,8 +126,10 @@ class App extends Component {
         <div className="header">
           <h1>ToDo List</h1>
         </div>
-        <CreateItem toDoItems={this.state.toDoItems} createItem={this.createItem.bind(this)} />
+        <button onClick={this.Onshowmodal}>click on me for modal</button>
+        <Modal show={this.state.showmodal} onclose={this.HandleModalclose} ></Modal>
         <ToDoList toDoItems={this.state.toDoItems} deleteItem={this.deleteItem.bind(this)} saveItem={this.saveItem.bind(this)} togglePriority={this.togglePriority.bind(this)} toggleComplete={this.toggleComplete.bind(this)} />
+
       </div>
     );
   }
