@@ -32,6 +32,7 @@ class CreateItem extends React.Component {
       this.newItemsubTitle.current.value = '';
       this.newItemnotes.current.value = '';
       this.newItemsubtask.current.value = '';
+      console.log('hi from me');
 
     }
 

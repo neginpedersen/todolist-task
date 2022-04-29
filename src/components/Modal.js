@@ -4,6 +4,7 @@ import '../styling/style.scss';
 class Modal extends Component {
     constructor(props){
         super(props);
+        console.log('hi'+this.props.toDoItems);
     }
     render() {
         return (
@@ -12,7 +13,7 @@ class Modal extends Component {
               <button className='close-modal' onClick={this.props.onclose} >
                    x
               </button>
-                <CreateItem></CreateItem>
+                <CreateItem createItem={this.props.createItem} toDoItems={this.props.toDoItems}  />
             </section>
         </div>
         );

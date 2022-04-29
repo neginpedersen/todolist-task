@@ -127,7 +127,7 @@ class App extends Component {
           <h1>ToDo List</h1>
         </div>
         <button onClick={this.Onshowmodal}>click on me for modal</button>
-        <Modal show={this.state.showmodal} onclose={this.HandleModalclose} ></Modal>
+        <Modal show={this.state.showmodal} onclose={this.HandleModalclose}  createItem={this.createItem.bind(this)} toDoItems={this.state.toDoItems} ></Modal>
         <ToDoList toDoItems={this.state.toDoItems} deleteItem={this.deleteItem.bind(this)} saveItem={this.saveItem.bind(this)} togglePriority={this.togglePriority.bind(this)} toggleComplete={this.toggleComplete.bind(this)} />
 
       </div>
