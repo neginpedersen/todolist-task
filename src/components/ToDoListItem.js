@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styling/style.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit,faCheck, faTrash, faWindowClose, faClock } from '@fortawesome/fontawesome-free-solid';
+import { faEdit,faCheck, faTrash, faWindowClose, faClock, faBell } from '@fortawesome/fontawesome-free-solid';
 
 class ToDoListItem extends React.Component {
     constructor(props) {
@@ -33,11 +33,16 @@ class ToDoListItem extends React.Component {
         );
       }
 
-      return (<div style={itemStyle} onClick={this.props.toggleComplete.bind(this, this.props.name)}>
-        <span>{this.props.name}</span>
-        <span>{this.props.subtitle}</span>
-        <span>{this.props.notes}</span>
-        <span style={itemStyle} onClick={this.props.toggleComplete.bind(this, this.props.name)}>{this.props.subtask}</span>
+      return (
+      <div className='todo-item-itself' style={itemStyle} onClick={this.props.toggleComplete.bind(this, this.props.name)}>
+              <div className='flex-row'>
+                    <span class='task-title'>{this.props.name}</span>
+              </div>
+              <div class='divider'> </div>
+              <div>{this.props.subtitle}</div>
+              <div>{this.props.notes}</div>
+              <div style={itemStyle} onClick={this.props.toggleComplete.bind(this, this.props.name)}>{this.props.subtask}</div>
+
         </div>
       );
     }
@@ -79,13 +84,15 @@ class ToDoListItem extends React.Component {
     render() {
       return (
         <div className="to-do-item">
-          <FontAwesomeIcon className="faicons2" icon={faClock} onClick={this.props.togglePriority.bind(this, this.props.name)} />
-          <span className="name">
-          {this.renderName()}
-          </span>
-          <span className="actions">
-          {this.renderButtons()}
-          </span>
+                <FontAwesomeIcon className="priority" icon={faBell} onClick={this.props.togglePriority.bind(this, this.props.name)} />
+
+                {this.renderName()}
+
+                <div className="actions">
+                {this.renderButtons()}
+                </div>
+
+
         </div>
       );
     }

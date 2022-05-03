@@ -40,7 +40,7 @@ class CreateItem extends React.Component {
       return (
         <div className="create-new">
           <form onSubmit={this.handleCreate.bind(this)}>
-            <input type="text" placeholder="New Task" ref={this.newItemInput} />
+            <input type="text" placeholder="New Task" maxLength={30} ref={this.newItemInput} />
             <input type="text" placeholder="subTitle" ref={this.newItemsubTitle} />
             <input type="text" placeholder="Notes" ref={this.newItemnotes} />
             <input type="text" placeholder="subTask" ref={this.newItemsubtask} />

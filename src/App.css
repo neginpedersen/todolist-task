@@ -1,17 +1,13 @@
-
-
 .App {
   text-align: center;
 }
 
-
-
-body{
-  background-color:var(--link-color-10);
+body {
+  background-color: var(--link-color-10);
 }
-.App{
+.App {
   background-color: var(--link-color-70);
-  min-height:500px;
+  min-height: 500px;
   width: 400px;
   margin: 40px auto;
   border-radius: 5px;

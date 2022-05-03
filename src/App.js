@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import CreateItem from './components/CreateItem';
 import ToDoList from './components/ToDoList';
-import Dool from './components/Dool';
 import Modal from './components/Modal';
+import { faPlus } from '@fortawesome/fontawesome-free-solid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 let toDoItems = [
   {
-    name: 'Click on the createxxxxx to create task',
-    subtitle:'',
-    notes: '',
-    subask: '',
+    name: 'Click on the create to create task',
+    subtitle:'you can write subtitle',
+    notes: 'notes notes notes',
+    subask: 'subtask',
     priority: true,
     completed: false
   },
@@ -123,13 +124,17 @@ class App extends Component {
   render() {
     return (
       <div className="to-do-app">
-        <div className="header">
-          <h1>ToDo List</h1>
-        </div>
-        <button onClick={this.Onshowmodal}>click on me for modal</button>
-        <Modal show={this.state.showmodal} onclose={this.HandleModalclose}  createItem={this.createItem.bind(this)} toDoItems={this.state.toDoItems} ></Modal>
-        <ToDoList toDoItems={this.state.toDoItems} deleteItem={this.deleteItem.bind(this)} saveItem={this.saveItem.bind(this)} togglePriority={this.togglePriority.bind(this)} toggleComplete={this.toggleComplete.bind(this)} />
+        <div className="to-do-app-header">
 
+          <div className='plus-cont main-color-2'>
+          <FontAwesomeIcon icon={faPlus} onClick={this.Onshowmodal} />
+          <p>Add to do</p>
+          </div>
+        </div>
+        <Modal show={this.state.showmodal} onclose={this.HandleModalclose}  createItem={this.createItem.bind(this)} toDoItems={this.state.toDoItems} ></Modal>
+        <div className='to-do-app-main'>
+        <ToDoList toDoItems={this.state.toDoItems} deleteItem={this.deleteItem.bind(this)} saveItem={this.saveItem.bind(this)} togglePriority={this.togglePriority.bind(this)} toggleComplete={this.toggleComplete.bind(this)} />
+        </div>
       </div>
     );
   }
